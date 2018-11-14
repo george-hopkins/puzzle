@@ -76,11 +76,11 @@ impl Context {
         }
 
         let mut data = std::vec::Vec::with_capacity(width * height);
-        for y in 0..height {
-            for x in 0..width {
-                let offset = (metadata.height as usize * (width - x - 1) * scale
-                    + (height - y - 1) * scale)
-                    * 3;
+        for x in 0..width {
+            for y in 0..height {
+                let offset = 3
+                    * (metadata.width as usize * (height - y - 1) * scale
+                        + (width - x - 1) * scale);
                 data.push(rgb24_to_luminance(&pixels[offset..offset + 3]));
             }
         }
