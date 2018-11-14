@@ -102,6 +102,7 @@ impl Context {
         }
     }
 
+    #[allow(dead_code)]
     fn init_cvec(&mut self) -> Cvec {
         let cvec_sys = unsafe {
             let mut mem = MaybeUninit::<sys::PuzzleCvec>::uninitialized();
@@ -133,6 +134,7 @@ impl Drop for Cvec {
     }
 }
 
+#[allow(dead_code)]
 fn rgb24_to_luminance(pixel: &[u8]) -> u8 {
     ((pixel[0] as u16 * 77 + pixel[1] as u16 * 151 + pixel[2] as u16 * 28 + 128) / 256) as u8
 }

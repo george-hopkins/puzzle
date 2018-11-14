@@ -9,7 +9,7 @@ fn configure_gd(build: &mut Build) {
 }
 
 #[cfg(not(feature = "gd"))]
-fn configure_gd(build: &mut Build) {}
+fn configure_gd(_build: &mut Build) {}
 
 fn main() {
     let mut build = Build::new();
