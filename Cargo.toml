@@ -1,0 +1,14 @@
+[package]
+name = "puzzle"
+version = "0.1.0"
+authors = ["George Hopkins <george-hopkins@null.net>"]
+
+[features]
+default = ["gd"]
+gd = []
+
+[dependencies]
+jpeg-decoder = { version = "0.1.15", optional = true }
+
+[build-dependencies]
+cc = "1.0"
