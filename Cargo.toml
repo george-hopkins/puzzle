@@ -2,6 +2,11 @@
 name = "puzzle"
 version = "0.1.0"
 authors = ["George Hopkins <george-hopkins@null.net>"]
+repository = "https://github.com/george-hopkins/puzzle"
+description = "quickly find visually similar images"
+keywords = ["libpuzzle", "image", "photo", "difference", "similarity"]
+categories = ["api-bindings", "multimedia::images"]
+license = "ISC"
 
 [features]
 default = ["gd"]
