@@ -12,10 +12,10 @@ The [Puzzle library](https://www.pureftpd.org/project/libpuzzle) lets you quickl
 extern crate puzzle;
 
 fn main() {
-    let context = puzzle::Context::new();
-    let a = context.cvec_from_file("a.jpg");
-    let b = context.cvec_from_file("b.jpg");
-    println!("{}", a.distance(b));
+    let mut context = puzzle::Context::new();
+    let a = context.cvec_from_file("a.jpg").unwrap();
+    let b = context.cvec_from_file("b.jpg").unwrap();
+    println!("{}", a.distance(&b));
 }
 ```
 
