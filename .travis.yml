@@ -1,0 +1,15 @@
+language: rust
+
+rust: nightly
+
+env:
+  - FEATURES=
+  - FEATURES=gd
+    APT=libgd-dev
+  - FEATURES=jpeg-decoder
+  - FEATURES='gd jpeg-decoder'
+    APT=libgd-dev
+
+install: '[[ -z "$APT" ]] || sudo apt-get install -yy $APT'
+
+script: cargo test --verbose --no-default-features --features "$FEATURES"
